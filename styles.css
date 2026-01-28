@@ -22,7 +22,7 @@
     /* .card {
       duplicate selector created again to add new styles.
     } */
-*/
+
 
 /*
   TODO 0: Link the style sheet using the link tag inside the head tag.
@@ -33,7 +33,9 @@
       1. Define --brand variable and set a color value of #2563eb for primary UI elements
       2. Define --brand-dark variable and set a darker color value of #1d4ed8 for hover states
   - Apply a global box-sizing reset using the universal selector (hint use * selector).
+
 */
+
 
 /* TODO 2:
    - Give .site-header & .site-footer a subtle background using var(--card)
@@ -71,7 +73,116 @@
 */
 
 /* Base CSS (already provided for you).*/
+:root {
+    /* 1. Primary UI Color */
+    --brand: #2563eb;
 
+    /* 2. Darker Hover State */
+    --brand-dark: #1d4ed8;
+}
+
+.site-header,
+.site-footer {
+    background-color: var(--card);
+}
+
+.tagline {
+    color: var(--muted);
+}
+
+
+.color-demo .color-note {
+    color: var(--brand);
+    font-weight: bold;
+}
+
+.color-demo .muted {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.bg-sample {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    margin-block: 0.75rem;
+    border-radius: 8px; /* Standard rounded corner */
+    color: white;
+    background: linear-gradient(135deg, var(--brand), #22c55e);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.inline-label {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.inline-label.alt {
+    display: inline-block; /* Keeps it inline-block like the parent */
+    border-style: dashed;
+}
+
+
+.copy .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.copy .intro {
+    font-style: italic;
+    line-height: 1.6;
+    margin-top: 0.25rem;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--brand-dark);
+    color: white;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.product-grid .item {
+    flex: 1 1 140px;
+    min-height: 90px;
+    background-color: var(--card);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.static-box {
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 0.5rem;
+}
 html,
 body {
   margin: 0;
